@@ -1,0 +1,39 @@
+class Persona {
+    private _nombre: string;
+    private _raza: string;
+    private _especie: string;
+  
+  
+    constructor(nombre: string, raza: string, especie: string) {
+      this.nombre = nombre;
+      this.raza = raza;
+      this.especie = especie;
+    }
+  
+    public toString(): string {
+      return Nombre: ${this.nombre},raza: ${this.raza}, especie: ${this.especie}};
+    }
+
+    public get nombre(): string {
+      return this._nombre;
+    }
+    public set nombre(value: string) {
+      this._nombre = value;
+    }
+
+    public get raza(): string {
+      return this._raza;
+    }
+    public set raza(value: string) {
+      this._raza = value;
+    }
+
+    public get especie(): string {
+      return this._especie;
+    }
+    public set especie(value: string) {
+      this._especie = value;
+    }
+  }
+  
+  export default Persona;
