@@ -1,0 +1,15 @@
+import singletonList from './SingletonList';
+import Persona from './Persona';
+
+
+const persona1 = new Persona('Demy','Clarke',20);
+singletonList.addToDataList(persona1);
+
+const persona2 = new Persona('donald','Reyna', 32);
+singletonList.addToDataList(persona2);
+
+const persona3 = new Persona('daniela','macias', 17);
+singletonList.addToDataList(persona3);
+
+
+singletonList.showDataList();
