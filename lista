@@ -1,0 +1,31 @@
+import Persona from "./Persona";
+
+class SingletonList {
+  private static instance: SingletonList;
+  private dataList: Persona[];
+
+  private constructor() {
+    this.dataList = [];
+  }
+
+  public static getInstance(): SingletonList {
+    if (!SingletonList.instance) {
+      SingletonList.instance = new SingletonList();
+    }
+    return SingletonList.instance;
+  }
+
+  public addToDataList(person: Persona): void {
+    this.dataList.push(person);
+  }
+
+  public showDataList(): void {
+    console.log("Datos en la lista:");
+    this.dataList.forEach((persona, index) => {
+      console.log(${index + 1}. ${persona.toString()});
+    });
+  }
+}
+
+const singletonList = SingletonList.getInstance();
+export default singletonList;
